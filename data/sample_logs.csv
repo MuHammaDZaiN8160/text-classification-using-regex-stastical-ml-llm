@@ -1,0 +1,34 @@
+log_message,label
+Multiple login failures occurred on user 9052 account,Security Alert
+Abnormal system behavior on server 40 potential security breach,Security Alert
+Unauthorized access attempt detected on port 22,Security Alert
+Brute force attack detected from IP 192.168.1.100,Security Alert
+User account locked due to multiple failed authentication attempts,Security Alert
+SSL certificate for api.example.com expires in 7 days,Security Alert
+Role permission denied: user admin_bot attempted to delete production table,Security Alert
+Suspicious outbound traffic detected from host 10.0.0.45 to external IP,Security Alert
+Failed sudo attempt by non-privileged user on server prod-01,Security Alert
+Malware signature matched on file upload from user session 4821,Security Alert
+API key exposed in public repository commit hash a3f91bc,Security Alert
+[instance: bf8a4] Total memory: 64172 MB used: 512.00 MB,Resource Usage
+phys_ram=64172MB used_ram=512MB phys_disk=15GB,Resource Usage
+CPU utilization at 95% on node worker-3,Resource Usage
+Disk usage exceeded 80% threshold on /dev/sda1,Resource Usage
+Memory pressure detected: available=256MB total=8192MB,Resource Usage
+Database connection pool exhausted: max=100 active=100 idle=0,Resource Usage
+Network latency spike detected: avg=450ms threshold=200ms on us-east-1,Resource Usage
+Swap usage at 92% on instance i-0abc123 in region ap-south-1,Resource Usage
+Inbound bandwidth exceeded 1Gbps on eth0 for the last 5 minutes,Resource Usage
+Container memory limit reached: pod api-gateway-7d9f restartedResource Usage
+Filesystem inode usage at 98% on /var/log partition,Resource Usage
+Escalation rule execution failed for ticket ID 9807 - undefined escalation level,Workflow Error
+Task assignment for TeamID 3425 could not complete due to invalid priority level,Workflow Error
+Workflow step 'approval' timed out after 300 seconds for request ID 4821,Workflow Error
+Pipeline stage 'deploy' failed: missing required configuration key,Workflow Error
+Automated job scheduler failed to trigger task batch_export at 02:00,Workflow Error
+Service health check failed for payment-service after 3 retries,Workflow Error
+Retry limit exceeded for message queue consumer group billing-events,Workflow Error
+Cron job daily-report did not execute - lock file already exists,Workflow Error
+Dependency resolution failed: package auth-service v2.1 not found in registry,Workflow Error
+CI/CD pipeline aborted: test suite exceeded maximum allowed duration of 30 minutes,Workflow Error
+Event listener for topic user.signup failed to acknowledge after 5 attempts,Workflow Error
