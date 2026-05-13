@@ -2,7 +2,7 @@ import streamlit as st
 import httpx
 import pandas as pd
 
-API_URL = "http://localhost:8000"
+API_URL = "https://text-classification-using-regex-stastical-ml-llm-production.up.railway.app"
 
 st.set_page_config(page_title="Log Classifier", page_icon="🔍", layout="wide")
 st.title("Log Classification System")
