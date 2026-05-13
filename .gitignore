@@ -2,6 +2,9 @@
 .env
 *.env
 
+# Streamlit secrets (keep example, ignore actual)
+.streamlit/secrets.toml
+
 # Python
 __pycache__/
 *.py[cod]
