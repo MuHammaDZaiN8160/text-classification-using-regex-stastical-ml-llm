@@ -1,0 +1,14 @@
+.env
+.git
+.gitignore
+.streamlit/
+frontend/
+models/
+*.md
+runtime.txt
+run_backend.py
+run_frontend.py
+streamlit_app.py
+__pycache__/
+*.pyc
+*.pyo
