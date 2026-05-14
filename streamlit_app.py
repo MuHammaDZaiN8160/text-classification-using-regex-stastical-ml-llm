@@ -2,7 +2,7 @@ import streamlit as st
 import httpx
 import pandas as pd
 
-BACKEND_URL = "https://text-classification-using-regex-stastical-ml-llm-production.up.railway.app"
+BACKEND_URL = "https://zain8160-text-classifier-backend.hf.space"
 
 METHOD_COLORS = {"regex": "🟢", "bert": "🔵", "llm": "🟣"}
 LABEL_COLORS  = {"Security Alert": "🔴", "Resource Usage": "🟡", "Workflow Error": "🟠"}
