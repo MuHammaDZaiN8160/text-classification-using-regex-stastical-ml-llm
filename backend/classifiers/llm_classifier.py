@@ -13,14 +13,19 @@ Reply with ONLY the category name, nothing else."""
 
 class LLMClassifier:
     def __init__(self):
-        api_key = os.getenv("GROQ_API_KEY")
-        if not api_key:
-            raise ValueError("GROQ_API_KEY environment variable not set.")
-        self.client = Groq(api_key=api_key)
         self.model = os.getenv("LLM_MODEL", "deepseek-r1-distill-llama-70b")
+        self._client: Groq | None = None
+
+    def _get_client(self) -> Groq:
+        if self._client is None:
+            api_key = os.getenv("GROQ_API_KEY")
+            if not api_key:
+                raise RuntimeError("GROQ_API_KEY is not set. Add it in HF Space secrets.")
+            self._client = Groq(api_key=api_key)
+        return self._client
 
     def predict(self, text: str) -> str:
-        response = self.client.chat.completions.create(
+        response = self._get_client().chat.completions.create(
             model=self.model,
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},

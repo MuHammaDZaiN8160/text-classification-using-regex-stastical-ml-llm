@@ -34,7 +34,12 @@ def root():
 def classify(req: ClassifyRequest):
     if not req.text.strip():
         raise HTTPException(status_code=400, detail="text cannot be empty")
-    result = pipeline.classify(req.text)
+    try:
+        result = pipeline.classify(req.text)
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Classification failed: {e}")
     return ClassifyResponse(**result)
 
 
@@ -76,5 +81,10 @@ def stats():
 def classify_batch(texts: list[str]):
     if not texts:
         raise HTTPException(status_code=400, detail="texts list cannot be empty")
-    results = [pipeline.classify(t) for t in texts]
+    try:
+        results = [pipeline.classify(t) for t in texts]
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Classification failed: {e}")
     return results
