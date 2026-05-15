@@ -10,7 +10,7 @@ COPY data/ ./data/
 RUN mkdir -p models
 
 ENV GROQ_API_KEY=""
-ENV LLM_MODEL="deepseek-r1-distill-llama-70b"
+ENV LLM_MODEL="compound-beta"
 ENV MIN_SAMPLES_FOR_BERT="10"
 
 EXPOSE 7860
